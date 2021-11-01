@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPaneGeral" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grupo1.hospital.app.PrincipalController">
+   <children>
+      <MenuBar fx:id="menuBarPrincipal" prefHeight="26.0" prefWidth="606.0">
+         <menus>
+            <Menu fx:id="menuPessoa" mnemonicParsing="false" text="Pessoa">
+               <items>
+                  <MenuItem fx:id="menuItemPessoa" mnemonicParsing="false" onAction="#abrirCadastroPessoa" text="Pessoa" />
+                  <MenuItem fx:id="menuItemMedico" mnemonicParsing="false" onAction="#abrirCadastroMedico" text="Médico" />
+                  <MenuItem fx:id="menuItemPaciente" mnemonicParsing="false" onAction="#abrirCadastroPaciente" text="Paciente" />
+                  <MenuItem fx:id="menuItemEnfermeiro" mnemonicParsing="false" onAction="#abrirCadastroEnfermeiro" text="Enfermeiro" />
+               </items>
+            </Menu>
+            <Menu fx:id="menuAcoes" mnemonicParsing="false" text="Ações">
+               <items>
+                  <MenuItem fx:id="menuItemAgenda" mnemonicParsing="false" onAction="#abrirCadastroAgenda" text="Agenda" />
+                  <MenuItem fx:id="menuItemInternacao" mnemonicParsing="false" onAction="#abrirCadastroInternacao" text="Internação" />
+                  <MenuItem fx:id="menuItemServico" mnemonicParsing="false" onAction="#abrirCadastroServico" text="Serviço" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPanePrincipal" layoutY="25.0" prefHeight="382.0" prefWidth="613.0" />
+   </children>
+</AnchorPane>

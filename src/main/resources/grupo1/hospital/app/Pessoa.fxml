@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grupo1.hospital.app.PessoaController">
+   <children>
+      <TableView fx:id="tableViewPessoa" layoutY="208.0" prefHeight="178.0" prefWidth="600.0">
+        <columns>
+          <TableColumn id="tableColumId" fx:id="tableColumnId" editable="false" prefWidth="75.0" sortable="false" text="id" visible="false" />
+          <TableColumn id="tableColumnCpf" fx:id="tableColumnCpf" prefWidth="100.0" text="CPF" />
+            <TableColumn id="tableColumnNome" fx:id="tableColumnNome" minWidth="50.0" prefWidth="200.0" text="Nome" />
+            <TableColumn id="tableColumnDtNascimento" fx:id="tableColumnDtNascimento" prefWidth="75.0" text="Nasc." />
+            <TableColumn id="tableColumnTelefone" fx:id="tableColumnTelefone" prefWidth="75.0" text="Telefone" />
+            <TableColumn id="tableColumnSexo" fx:id="tableColumnSexo" prefWidth="75.0" text="Sexo" />
+            <TableColumn id="tableColumnRg" fx:id="tableColumnRg" prefWidth="75.0" text="RG" />
+        </columns>
+      </TableView>
+      <Label fx:id="labelNome" layoutX="24.0" layoutY="47.0" text="Nome:" />
+      <Label fx:id="labelCpf" layoutX="22.0" layoutY="82.0" text="CPF:" />
+      <Label fx:id="labelRg" layoutX="24.0" layoutY="112.0" text="RG:" />
+      <Label fx:id="labelDtNascimento" layoutX="12.0" layoutY="145.0" text="Nascimento:" />
+      <Label fx:id="labelTelefone" layoutX="327.0" layoutY="47.0" text="Telefone:" />
+      <Label fx:id="labelId" layoutX="27.0" layoutY="184.0" text="Id:" />
+      <Label fx:id="labelSexo" layoutX="348.0" layoutY="82.0" text="Sexo:" />
+      <TextField fx:id="textFieldNome" layoutX="67.0" layoutY="43.0" prefHeight="25.0" prefWidth="254.0" />
+      <TextField fx:id="textFieldCpf" layoutX="67.0" layoutY="78.0" prefHeight="25.0" prefWidth="254.0" />
+      <TextField fx:id="textFieldRg" layoutX="67.0" layoutY="108.0" prefHeight="25.0" prefWidth="254.0" />
+      <TextField fx:id="textFieldTelefone" layoutX="382.0" layoutY="43.0" prefHeight="25.0" prefWidth="211.0" />
+      <TextField fx:id="textFieldSexo" layoutX="382.0" layoutY="78.0" prefHeight="25.0" prefWidth="28.0" />
+      <TextField fx:id="textFieldId" editable="false" layoutX="45.0" layoutY="180.0" prefHeight="25.0" prefWidth="36.0" text="0" />
+      <Button fx:id="buttonSalvar" layoutX="519.0" layoutY="117.0" mnemonicParsing="false" onAction="#handlerSalvarPessoa" prefHeight="25.0" prefWidth="62.0" text="Salvar" />
+      <Button fx:id="buttonCancelar" layoutX="450.0" layoutY="150.0" mnemonicParsing="false" onAction="#handlerCancelar" text="Cancelar" />
+      <Button fx:id="buttonExcluir" layoutX="382.0" layoutY="117.0" mnemonicParsing="false" onAction="#handlerExcluirPessoa" prefHeight="25.0" prefWidth="62.0" text="Excluir" />
+      <DatePicker fx:id="datePickerDtNascimento" layoutX="85.0" layoutY="141.0" />
+      <Label layoutX="226.0" layoutY="6.0" text="Tela de cadastro de pessoas" />
+   </children>
+</AnchorPane>
