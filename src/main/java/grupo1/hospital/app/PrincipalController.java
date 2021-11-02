@@ -48,8 +48,9 @@ public class PrincipalController {
     }
     
     @FXML
-    private void abrirCadastroMedico() {
-    	System.out.println("abrirCadastroMedico");
+    private void abrirCadastroMedico() throws IOException {
+    	AnchorPane a = FXMLLoader.load(getClass().getResource("Medico.fxml"));
+    	anchorPanePrincipal.getChildren().setAll(a);
     }
     
     @FXML

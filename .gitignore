@@ -12,3 +12,5 @@ local.properties
 
 # Java annotation processor (APT)
 .factorypath
+/target/
+/bin/

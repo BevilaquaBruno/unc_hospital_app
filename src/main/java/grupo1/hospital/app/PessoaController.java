@@ -69,10 +69,6 @@ public class PessoaController implements Initializable {
 	private Button buttonCancelar;
 	@FXML
 	private Button buttonExcluir;
-	@FXML
-	private Button buttonEditar;
-	@FXML
-	private Button buttonNovo;
 	
 	private ObservableList<Pessoa> olPessoa;
 	private Integer idPessoaSelecionada;
@@ -86,7 +82,6 @@ public class PessoaController implements Initializable {
 	
     private void selecionarPessoa(Pessoa pessoa) {
     	try {
-    		System.out.println(pessoa);
             idPessoaSelecionada = pessoa.getIdPessoa();
 
             textFieldId.setText(String.valueOf(pessoa.getIdPessoa()));
@@ -254,7 +249,6 @@ public class PessoaController implements Initializable {
     private void handlerExcluirPessoa(ActionEvent event) {
         if (idPessoaSelecionada != null && idPessoaSelecionada != 0){
             try {
-            	System.out.print("Excluir pessoa id: "+idPessoaSelecionada);
                 URL url = new URL("http://localhost:8080/api/pessoa/excluir?id="+idPessoaSelecionada);
     			HttpURLConnection connection = (HttpURLConnection) url.openConnection();  //abre conexao
 
