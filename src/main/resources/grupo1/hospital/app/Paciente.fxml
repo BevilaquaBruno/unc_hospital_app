@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grupo1.hospital.app.PacienteController">
+   <children>
+      <ComboBox fx:id="comboBoxPessoa" layoutX="84.0" layoutY="61.0" prefHeight="25.0" prefWidth="482.0" />
+      <Label fx:id="labelPessoa" layoutX="38.0" layoutY="65.0" text="Pessoa:" />
+      <Label layoutX="20.0" layoutY="109.0" text="Gravidade:" />
+      <TextField fx:id="textFieldGravidade" layoutX="84.0" layoutY="105.0" prefHeight="25.0" prefWidth="49.0" />
+      <Label layoutX="64.0" layoutY="174.0" text="id:" />
+      <TextField fx:id="textFieldId" editable="false" layoutX="84.0" layoutY="170.0" prefHeight="25.0" prefWidth="27.0" promptText="0" />
+      <Button fx:id="buttonSalvar" layoutX="438.0" layoutY="105.0" mnemonicParsing="false" onAction="#handlerSalvar" prefHeight="25.0" prefWidth="62.0" text="Salvar" />
+      <Button fx:id="buttonCancelar" layoutX="376.0" layoutY="130.0" mnemonicParsing="false" onAction="#handlerCancelar" text="Cancelar" />
+      <Button fx:id="buttonExcluir" layoutX="314.0" layoutY="105.0" mnemonicParsing="false" onAction="#handlerExcluir" prefHeight="25.0" prefWidth="62.0" text="Excluir" />
+      <TableView fx:id="tableViewPaciente" layoutY="222.0" prefHeight="178.0" prefWidth="582.0">
+         <columns>
+            <TableColumn id="tableColumId" fx:id="tableColumnId" editable="false" prefWidth="75.0" sortable="false" text="id" visible="false" />
+            <TableColumn id="tableColumnCpf" fx:id="tableColumnCpf" prefWidth="100.0" text="CPF" />
+            <TableColumn id="tableColumnNome" fx:id="tableColumnNome" minWidth="50.0" prefWidth="200.0" text="Nome" />
+            <TableColumn id="tableColumnDtNascimento" fx:id="tableColumnDtNascimento" prefWidth="75.0" text="Nasc." />
+            <TableColumn id="tableColumnTelefone" fx:id="tableColumnTelefone" prefWidth="75.0" text="Telefone" />
+            <TableColumn id="tableColumnSexo" fx:id="tableColumnGravidade" prefWidth="130.0" text="Gravidade" />
+            <TableColumn id="tableColumId" fx:id="tableColumnIdPessoa" editable="false" prefWidth="75.0" sortable="false" text="idPessoa" visible="false" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="-1.0" prefHeight="30.0" prefWidth="575.0" text="Tela Cadastro de Paciente">
+         <font>
+            <Font name="Candara" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="2.0" layoutY="-1.0" prefHeight="30.0" prefWidth="608.0" text="Internação">
+         <font>
+            <Font name="Candara" size="24.0" />
+         </font></Label>
+      <ComboBox fx:id="comboBoxPaciente" layoutX="126.0" layoutY="34.0" prefHeight="25.0" prefWidth="462.0" />
+      <Label fx:id="labelPessoa" layoutX="31.0" layoutY="38.0" text="Paciente:" />
+      <ComboBox fx:id="comboBoxPessoa1" layoutX="126.0" layoutY="84.0" prefHeight="25.0" prefWidth="462.0" />
+      <Label fx:id="labelPessoa1" layoutX="21.0" layoutY="88.0" text="Acompanhante:" />
+      <Label layoutX="35.0" layoutY="131.0" text="Quarto:" />
+      <TextField fx:id="txtfieldQuarto" layoutX="91.0" layoutY="127.0" />
+      <Label layoutX="268.0" layoutY="131.0" text="Hora:" />
+      <TextField layoutX="313.0" layoutY="127.0" prefHeight="25.0" prefWidth="57.0" promptText="00:00" />
+      <Button fx:id="buttonSalvar" layoutX="398.0" layoutY="126.0" mnemonicParsing="false" onAction="#handlerSalvar" prefHeight="25.0" prefWidth="62.0" text="Salvar" />
+      <Button fx:id="buttonCancelar" layoutX="537.0" layoutY="126.0" mnemonicParsing="false" onAction="#handlerCancelar" text="Cancelar" />
+      <Button fx:id="buttonExcluir" layoutX="469.0" layoutY="126.0" mnemonicParsing="false" onAction="#handlerExcluir" prefHeight="25.0" prefWidth="62.0" text="Excluir" />
+      <TableView layoutX="-2.0" layoutY="172.0" prefHeight="237.0" prefWidth="615.0">
+         <columns>
+            <TableColumn prefWidth="193.0" text="Acompanhante" />
+            <TableColumn prefWidth="233.0" text="Paciente" />
+            <TableColumn prefWidth="97.0" text="Hora" />
+            <TableColumn minWidth="2.0" prefWidth="89.0" text="Quarto" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
