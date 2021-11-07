@@ -7,5 +7,6 @@ module grupo1.hospital.app {
 
     opens grupo1.hospital.app to javafx.fxml, javafx.base;
     opens grupo1.hospital.app.classes to javafx.fxml, javafx.base;
+
     exports grupo1.hospital.app;
 }

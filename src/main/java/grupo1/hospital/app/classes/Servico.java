@@ -1,15 +1,17 @@
 package grupo1.hospital.app.classes;
 
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 
 public class Servico {
-	private Integer id;
-	private String descricao;
+	private SimpleIntegerProperty id;
+	private SimpleStringProperty descricao;
 	private Medico medico;
 	private Paciente paciente;
 	private Enfermeiro enfermeiro;
 
 	public Servico(String descricao, Medico medico, Paciente paciente, Enfermeiro enfermeiro){
-		this.descricao = descricao;
+		this.descricao = new SimpleStringProperty(descricao);
 		this.setMedico(medico);
 		this.setPaciente(paciente);
 		this.setEnfermeiro(enfermeiro);
@@ -17,20 +19,20 @@ public class Servico {
 
 	/* Getters */
 	public Integer getId() {
-		return this.id;
+		return this.id.get();
 	}
 	
 	public String getDescricao() {
-		return this.descricao;
+		return this.descricao.get();
 	}
 
 	/* Setters */
 	public void setId(Integer id) {
-		this.id = id;
+		this.id = new SimpleIntegerProperty(id);
 	}
 	
 	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+		this.descricao = new SimpleStringProperty(descricao);
 	}
 
 	public Medico getMedico() {
@@ -55,5 +57,13 @@ public class Servico {
 
 	public void setPaciente(Paciente paciente) {
 		this.paciente = paciente;
+	}
+	/* properties */
+	public SimpleIntegerProperty idProperty() {
+		return this.id;
+	}
+	
+	public SimpleStringProperty descricaoProperty() {
+		return this.descricao;
 	}
 }

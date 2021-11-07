@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="grupo1.hospital.app.InternacaoController">
    <children>
       <Label alignment="CENTER" layoutX="2.0" layoutY="-1.0" prefHeight="30.0" prefWidth="608.0" text="Internação">
          <font>
@@ -17,22 +17,25 @@
          </font></Label>
       <ComboBox fx:id="comboBoxPaciente" layoutX="126.0" layoutY="34.0" prefHeight="25.0" prefWidth="462.0" />
       <Label fx:id="labelPessoa" layoutX="31.0" layoutY="38.0" text="Paciente:" />
-      <ComboBox fx:id="comboBoxPessoa1" layoutX="126.0" layoutY="84.0" prefHeight="25.0" prefWidth="462.0" />
+      <ComboBox fx:id="comboBoxAcompanhante" layoutX="126.0" layoutY="84.0" prefHeight="25.0" prefWidth="462.0" />
       <Label fx:id="labelPessoa1" layoutX="21.0" layoutY="88.0" text="Acompanhante:" />
       <Label layoutX="35.0" layoutY="131.0" text="Quarto:" />
-      <TextField fx:id="txtfieldQuarto" layoutX="91.0" layoutY="127.0" />
+      <TextField fx:id="textFieldQuarto" layoutX="91.0" layoutY="127.0" />
       <Label layoutX="268.0" layoutY="131.0" text="Hora:" />
-      <TextField layoutX="313.0" layoutY="127.0" prefHeight="25.0" prefWidth="57.0" promptText="00:00" />
+      <TextField fx:id="textFieldHora" layoutX="313.0" layoutY="127.0" prefHeight="25.0" prefWidth="57.0" promptText="00:00" />
       <Button fx:id="buttonSalvar" layoutX="398.0" layoutY="126.0" mnemonicParsing="false" onAction="#handlerSalvar" prefHeight="25.0" prefWidth="62.0" text="Salvar" />
       <Button fx:id="buttonCancelar" layoutX="537.0" layoutY="126.0" mnemonicParsing="false" onAction="#handlerCancelar" text="Cancelar" />
       <Button fx:id="buttonExcluir" layoutX="469.0" layoutY="126.0" mnemonicParsing="false" onAction="#handlerExcluir" prefHeight="25.0" prefWidth="62.0" text="Excluir" />
-      <TableView layoutX="-2.0" layoutY="172.0" prefHeight="237.0" prefWidth="615.0">
+      <TableView fx:id="tableViewInternacao" layoutX="-2.0" layoutY="204.0" prefHeight="205.0" prefWidth="615.0">
          <columns>
-            <TableColumn prefWidth="193.0" text="Acompanhante" />
-            <TableColumn prefWidth="233.0" text="Paciente" />
-            <TableColumn prefWidth="97.0" text="Hora" />
-            <TableColumn minWidth="2.0" prefWidth="89.0" text="Quarto" />
+            <TableColumn fx:id="tableColumnAcompanhante" prefWidth="193.0" text="Acompanhante" />
+            <TableColumn fx:id="tableColumnPaciente" prefWidth="233.0" text="Paciente" />
+            <TableColumn fx:id="tableColumnHora" prefWidth="97.0" text="Hora" />
+            <TableColumn fx:id="tableColumnQuarto" minWidth="2.0" prefWidth="89.0" text="Quarto" />
+            <TableColumn fx:id="tableColumnId" prefWidth="193.0" text="id" visible="false" />
          </columns>
       </TableView>
+      <Label layoutX="15.0" layoutY="175.0" text="id:" />
+      <TextField fx:id="textFieldId" layoutX="35.0" layoutY="171.0" prefHeight="25.0" prefWidth="29.0" text="0" />
    </children>
 </AnchorPane>

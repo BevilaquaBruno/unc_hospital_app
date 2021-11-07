@@ -66,17 +66,20 @@ public class PrincipalController {
     }
     
     @FXML
-    private void abrirCadastroAgenda() {
-    	System.out.println("abrirCadastroAgenda");
+    private void abrirCadastroAgenda() throws IOException {
+    	AnchorPane a = FXMLLoader.load(getClass().getResource("Agenda.fxml"));
+    	anchorPanePrincipal.getChildren().setAll(a);
     }
     
     @FXML
-    private void abrirCadastroInternacao() {
-    	System.out.println("abrirCadastroInternacao");
+    private void abrirCadastroInternacao() throws IOException {
+    	AnchorPane a = FXMLLoader.load(getClass().getResource("Internacao.fxml"));
+    	anchorPanePrincipal.getChildren().setAll(a);
     }
     
     @FXML
-    private void abrirCadastroServico() {
-    	System.out.println("abrirCadastroServico");
+    private void abrirCadastroServico() throws IOException {
+    	AnchorPane a = FXMLLoader.load(getClass().getResource("Servico.fxml"));
+    	anchorPanePrincipal.getChildren().setAll(a);
     }
 }
